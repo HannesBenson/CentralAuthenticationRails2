@@ -1,7 +1,7 @@
 require "authlogic"
 
-require "central_authentication_rails2/version"
-require "central_authentication_rails2/connection"
-require "central_authentication_rails2/migration"
-require "central_authentication_rails2/user"
-require "central_authentication_rails2/acts_as_central_authentication_user"
+require "central_authentication/version"
+require "central_authentication/connection"
+require "central_authentication/migration"
+require "central_authentication/user"
+require "central_authentication/acts_as_central_authentication_user"
