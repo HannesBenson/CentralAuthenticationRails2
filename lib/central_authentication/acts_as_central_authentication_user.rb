@@ -33,6 +33,14 @@ module ActiveRecord
           validates_confirmation_of :password
 
           before_save :create_or_set_cauth_user
+
+          def find_using_perishable_token(perishable_token)
+            central_authentication_user = CentralAuthentication::User.find_by_perishable_token(perishable_token)
+            if central_authentication_user.present?
+              user = self.find_by_central_auth_user_id(central_authentication_user.id)
+            end
+            return user
+          end
         end
       end
       module InstanceMethods
