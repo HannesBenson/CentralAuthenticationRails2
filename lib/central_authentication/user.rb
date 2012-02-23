@@ -6,7 +6,7 @@ class CentralAuthentication::User < CentralAuthentication::Connection
   end
 
   def self.valid?(email, password)
-    return false if !(cu = CentralAuthenticationRails2::User.find_by_email(email))
+    return false if !(cu = CentralAuthentication::User.find_by_email(email))
     cu.valid_password?(password)
   end
 end
