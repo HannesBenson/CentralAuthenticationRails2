@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Central Authentication using Authlogic on Rails 2}
   s.description = %q{This gem allows you to share a central database and using authlogic stores and retrieves passwords}
 
-  s.rubyforge_project = "central_authentication"
+  s.rubyforge_project = "central_authentication_rails2"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
