@@ -16,6 +16,8 @@ class AddUsersTableToCauthDb < CentralAuthentication::Migration
   end
 
   def self.down
-    drop_table :users
+    if table_exists?(:users)
+      drop_table :users
+    end
   end
 end
